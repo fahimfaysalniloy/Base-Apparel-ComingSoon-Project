@@ -18,6 +18,9 @@
     function validateMail(){
       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       if(document.getElementById('email').value.match(mailformat)){
+        document.getElementById('validity').classList.remove("alert");
+        document.getElementById('email').classList.remove("wrongInput");
+        document.getElementById('imge').classList.remove("arrow");
         document.getElementById('email').value="";
       }
       else{
