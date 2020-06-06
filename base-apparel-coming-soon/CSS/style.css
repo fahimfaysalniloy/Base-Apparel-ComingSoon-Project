@@ -35,6 +35,10 @@ header img{
 	display: none;
 }
 
+#imgMobile{
+	width: 100%;
+}
+
 .container{
 	margin: 10%;
 	margin-top: 15%;
@@ -78,6 +82,7 @@ header img{
 	background: transparent;
 	padding: 15px;
 	float: left;
+	outline: none;
 }
 
 #mail input::placeholder{
