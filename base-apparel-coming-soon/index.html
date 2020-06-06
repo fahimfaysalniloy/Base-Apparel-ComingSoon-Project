@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <script>
+    function validateMail(){
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(document.getElementById('email').value.match(mailformat)){
+        document.getElementById('email').value="";
+      }
+      else{
+        document.getElementById('validity').className="alert";
+        document.getElementById('email').className='wrongInput';
+        document.getElementById('imge').className='arrow';
+      }
+    }
+  </script>
+
+
+
+</head>
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="logo">
+  </header>
+
+  <div id="model">
+    <img src="./images/hero-desktop.jpg" alt="model" id="imgDesktop">
+    <img src="./images/hero-mobile.jpg" alt="model" id="imgMobile">
+  </div>
+
+  <div class="container">
+    <section id="heading">
+      <span id="top">We're</span>
+      <span class="bottom">coming</span>
+      <span class="bottom">soon</span>
+      <!-- <p>coming soon</p> -->
+    </section>
+
+    <section class="description">
+      <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <section id="mail">
+          <input type="email" name="mail" id="email" placeholder="Email Address">
+          <section id="imge" onclick="validateMail()"><img src="./images/icon-arrow.svg" alt="arrow" onclick="validateMail()"></section>
+        <p id="validity">Please provide a valid email</p>
+      </section>
+    </section>
+  </div>
+
+  <footer>
+    <!-- <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p> -->
+  </footer>
+</body>
+</html>
